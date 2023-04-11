@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- HEADER -->
+    <!------------------------ HEADER ----------------------------------->
     <header>
       <div class="container main-nav">
-        <!-- NAVIGATION -->
+        <!-------------------------------- NAVIGATION ---------------------->
         <nav class="nav-item">
           <a href="./index.html" class="logo link">
             web<span class="up">Studio</span>
@@ -37,7 +37,7 @@
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
         </nav>
-        <!-- ADDRESS -->
+        <!------------------------------ ADDRESS -------------------------->
         <address class="adr">
           <ul class="auth-nav list">
             <li class="item">
@@ -55,14 +55,16 @@
       </div>
     </header>
     <main>
-      <!--hero_image(button)-->
+      <!-----------------------------------hero_image(button)------------------------>
       <section class="hero">
         <div class="container">
           <h1 class="hero-titele">Effective Solutions for Your Business</h1>
-          <button type="button" data-modal-open class="button primary">Order Service</button>
+          <button type="button" data-modal-open class="button primary">
+            Order Service
+          </button>
         </div>
       </section>
-      <!-- volues_of_the_company -->
+      <!------------------------- volues_of_the_company ------------------------>
       <section class="section">
         <div class="container">
           <h2 class="section-titel visually-hidden">Volues of the company</h2>
@@ -118,7 +120,7 @@
           </ul>
         </div>
       </section>
-      <!-- what_are_we_doing -->
+      <!-------------------------------- what_are_we_doing -------------------->
       <section class="section-we-doing">
         <div class="container">
           <h2 class="section-titales">What are we doing</h2>
@@ -135,7 +137,7 @@
           </ul>
         </div>
       </section>
-      <!-- Our-team -->
+      <!------------------------------ Our-team -------------------->
       <section class="team">
         <div class="container">
           <h2 class="section-titales head">Our team</h2>
@@ -307,7 +309,7 @@
           </ul>
         </div>
       </section>
-      <!-- Customers -->
+      <!---------------------------------------- Customers -------------------------->
       <section class="section-customers">
         <div class="container">
           <h2 class="section-titales">Customers</h2>
@@ -370,7 +372,7 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <!-- social-networks -->
+        <!----------------------------- social-networks ------------------------->
         <div class="footer-block">
           <p class="footer-socialtext">Social media</p>
           <ul class="social-footer list">
@@ -404,16 +406,99 @@
             </li>
           </ul>
         </div>
+<!-- -------------------- footer form----------------------- -->
+<div class="footer-mailing">
+  <b class="footer-socialtext">Subscribe</b>
+  <div class="mailing-block">
+      <label class="footer-label">
+          <input class="footer-input"name="email" type="email" placeholder="E-mail" />
+      </label>
+      <div class="footer-subscribe">
+          <button class="button-footer" type="submit"
+          >
+          Subscribe
+              <svg class="icon-subscribe" width="24" height="24">
+                  <use href="./images/icons.svg#icon-footer"></use>
+              </svg>
+          </button>
+      </div>
+  </div>
+</div>
+</div>
+
+
       </div>
     </footer>
-<!-- MODAL -->
+    <!-------------------------------- MODAL --------------------------------->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button  class="button-modal-close" data-modal-close type="button"> 
-          <svg class="modal-button" width="8" height="8"> <use href="./images/close.svg#close"> </use>
+        <button class="button-modal-close" data-modal-close type="button">
+          <svg class="modal-button" width="8" height="8">
+            <use href="./images/close.svg#close"></use>
           </svg>
-          
         </button>
+
+        <form class="form">
+          <p class="form-title">
+            Leave your contacts and we will call you back
+          </p>
+
+          <label class="form-contacts">
+            <span class="modal-text">Name</span>
+            <div class="imput-wrap">
+              <input class="modal-input" type="text" name="user-name" />
+              <svg class="icon-modal" width="18" height="18">
+              <use href="./images/icons.svg#icon-person"></use>
+             </svg> 
+            </div>
+          </label>
+
+          <label class="form-contacts">
+            <span class="modal-text">Phone</span>
+            <div class="imput-wrap">
+            <input class="modal-input" type="tel" name="tel-number" />
+            <svg class="icon-modal" width="18" height="24">
+              <use href="./images/icons.svg#icon-phone"></use>
+             </svg> </div>
+          </label>
+
+          <label class="form-contacts">
+            <span class="modal-text">Email</span>
+            <div class="imput-wrap">
+            <input class="modal-input" type="email" name="email" />
+            <svg class="icon-modal" width="18" height="24">
+              <use href="./images/icons.svg#icon-email"></use>
+             </svg> </div>
+          </label>
+
+          <label class="form-comments">
+            <span class="modal-text">Comment</span>
+            <textarea
+                class="com-input"
+                name="comment"
+                id="comment"
+                rows="8"
+                placeholder="Text input"
+            ></textarea>
+
+          </label>
+          <label class="form-contacts">
+              <input
+                  class="checkbox"
+                  type="checkbox"
+                  name="agreement"
+                  id="agreement"/>
+              <span class="icon-checkbox"></span>
+              <span class="agreement">I accept the terms and conditions of the 
+                  <span class="contract">Privacy Policy</span></span>
+          </label>
+
+          <div class="form-button">
+            <button class="button-send" type="submit">
+              Send
+            </button>
+        </div>
+        </form>
       </div>
     </div>
 
