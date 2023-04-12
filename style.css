@@ -698,12 +698,19 @@ color: var(--titel-text-color);
 .modal-input {
     border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
-width: 360px;
+width: 100%;
 height: 40px;
 left: 0px;
 top: 84px;
 padding-left: 38px;
+transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+.modal-input:focus {
+    border: 1px solid var(--logo-color);
+}
+
 
 .form-comments {
     display: flex;
@@ -747,6 +754,7 @@ font-weight: 400;
 font-size: 12px;
 line-height: 1,33;
 letter-spacing: 0.04em;
+margin-left: 24px;
 }
 
 .contract {
@@ -798,6 +806,7 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-contacts {
 align-items: center;}
@@ -830,4 +839,65 @@ align-items: center;}
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+/* -------------------CHECK BOX--------------------- */
+
+.option {
+  display: block;
+  /* margin-bottom: 0.5em; */
+  position: relative;
+}
+
+/* Check */
+
+.check {
+  /* padding-left: 1.2em; */
+  /* padding-left: 24px; */
+}
+
+.check__input {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.check__box {
+  position: absolute;
+  /* margin-top: 16px;
+  margin-left: 24px; */
+  width: 16px;
+  height:16px;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-shadow: 0 0 0 0.1em rgba(46, 47, 66, 0.4);
+}
+
+/* Checked */
+
+.check__input:checked + .check__box {
+  background-color: #4A90E2;
+  background-image: url(./images/click.svg);
+}
+
+/* Focused */
+
+.check__input:focus + .check__box {
+  box-shadow:
+    0 0 0 0.1em var(--logo-color),
+}
+
+/* Disabled */
+
+.check__input:disabled + .check__box {
+  box-shadow: 0 0 0 0.1em rgba(46, 47, 66, 0.4);
+}
+
+.check__input:checked:disabled + .check__box {
+  background-color: #9B9B9B;
 }
